@@ -31,7 +31,7 @@ contract BlackScholes is IBlackScholes {
   int private constant MAX_CDF_STD_DIST_INPUT = int(PRECISE_UNIT) * 10;
   /// @dev Below this value, the result is always 0
   int private constant MIN_EXP = -63 * int(PRECISE_UNIT);
-  /// @dev Above this value the a lot of precision is lost, and uint256s come close to not being able to handle the size
+  /// @dev Above this value a lot of precision is lost, and uint256s come close to not being able to handle the size
   uint private constant MAX_EXP = 100 * PRECISE_UNIT;
   /// @dev Value to use to avoid any division by 0 or values near 0
   uint private constant MIN_T_ANNUALISED = PRECISE_UNIT / SECONDS_PER_YEAR; // 1 second
